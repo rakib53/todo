@@ -91,3 +91,9 @@
 .addTodoBtn:hover {
   background: #3d27ce;
 }
+
+@media screen and (max-width: 550px) {
+  .addTodoInputContent {
+    width: 95%;
+  }
+}
