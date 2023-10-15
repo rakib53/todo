@@ -26,16 +26,18 @@ function App() {
   }, []);
 
   return (
-    <MyContext.Provider value={{ todos, setTodos }}>
+    <MyContext.Provider
+      value={{
+        todos,
+        setTodos,
+        setIsOpenModal,
+        isOpenModal,
+        setTodos,
+        handleCloseModal,
+      }}
+    >
       <header className="header"></header>
-      {isOpenModal && (
-        <AddTodoInput
-          setIsOpenModal={setIsOpenModal}
-          isOpenModal={isOpenModal}
-          handleCloseModal={handleCloseModal}
-          setTodos={setTodos}
-        />
-      )}
+      {isOpenModal && <AddTodoInput />}
       <Todos todos={todos} handleAddTodo={handleAddTodo} />
     </MyContext.Provider>
   );

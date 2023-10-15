@@ -1,14 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import MyContext from "../ContextAPI/Context";
 import styles from "../styles/AddTodoInput.module.css";
 
-function AddTodoInput({ setIsOpenModal, setTodos, handleCloseModal }) {
+function AddTodoInput() {
   const [todo, setTodo] = useState({
     title: "",
     category: "all",
     isCompleted: false,
   });
   const clickOutSideToCloseModalRef = useRef(null);
+  const { setIsOpenModal, setTodos, handleCloseModal } = useContext(MyContext);
 
   // adding a todo
   const handleAddTodo = (e) => {
