@@ -26,10 +26,12 @@ function AddTodoInput() {
     if (!existingTodosArray) {
       setTodos([newTodo]);
       localStorage.setItem("myTodos", JSON.stringify([newTodo]));
+      setIsOpenModal(false);
     } else {
       setTodos([...existingTodosArray, newTodo]);
       existingTodosArray.push(newTodo);
       localStorage.setItem("myTodos", JSON.stringify(existingTodosArray));
+      setIsOpenModal(false);
     }
   };
 
