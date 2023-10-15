@@ -1,0 +1,93 @@
+.addTodoInputWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #35353552;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addTodoInputContent {
+  max-width: 500px;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.addTodoHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addTodoText {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.close {
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  border-radius: 50px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgb(194, 17, 17);
+}
+
+.todoAddcontentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addTodo {
+  padding: 10px;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 15px;
+  color: #000000;
+  background-color: #c9c8c88e;
+  border-radius: 5px;
+}
+
+.selectCategory {
+  padding: 10px;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 15px;
+  color: #000000;
+  background-color: #c9c8c88e;
+  border-radius: 5px;
+}
+
+.addTodoBtn {
+  background: #4834d4;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.addTodoBtn:hover {
+  background: #3d27ce;
+}

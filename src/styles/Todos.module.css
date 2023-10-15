@@ -1,0 +1,106 @@
+.todoPageWrapper {
+  max-width: 700px;
+  width: 100%;
+  margin: -200px auto 0;
+  z-index: 10000;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.todoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.addTodo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #8315e9;
+  cursor: pointer;
+}
+
+.add {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+.todoHeader .todoWrapper {
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.searchByTodoInput {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 15px 20px;
+  color: #000000;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.searchByCategory {
+  max-width: 120px;
+  width: 100%;
+  padding: 0 10px;
+  color: #000000;
+  font-size: 16px;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-left: 2px solid #8315e9;
+  border-radius: 0 8px 8px 0;
+}
+
+.totalTodoCount {
+  width: 100%;
+  padding: 15px 20px;
+  color: #000000;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+
+@media screen and (max-width: 500px) {
+  .todoHeader {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+
+  .todoWrapper,
+  .filterWrapper {
+    padding: 0 10px;
+  }
+}

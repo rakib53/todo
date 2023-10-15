@@ -1,0 +1,89 @@
+.todoCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 18px 20px;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.todoCard:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.circleAndContentWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.circleBlank {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  transition: all 0.3s linear;
+}
+
+.circleFill {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  transition: all 0.3s linear;
+  background-color: #8315e9;
+  position: relative;
+}
+
+.circleFill::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 10px;
+  flex-shrink: 0;
+  border: solid #fff;
+  border-width: 0 2.8px 2.8px 0;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.circleBlank:hover {
+  cursor: pointer;
+  border: 1px solid #8315e9;
+}
+
+.todoContent {
+  width: 100%;
+  color: #000000;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  word-break: break-all;
+}
+
+.tools {
+  display: flex;
+  gap: 15px;
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+  color: rgba(243, 12, 12, 0.815);
+  cursor: pointer;
+}
+
+.copy {
+  width: 20px;
+  height: 20px;
+  color: #585858;
+  cursor: pointer;
+}
