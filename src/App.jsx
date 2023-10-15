@@ -33,12 +33,13 @@ function App() {
         setIsOpenModal,
         isOpenModal,
         setTodos,
+        handleAddTodo,
         handleCloseModal,
       }}
     >
       <header className="header"></header>
       {isOpenModal && <AddTodoInput />}
-      <Todos todos={todos} handleAddTodo={handleAddTodo} />
+      <Todos />
     </MyContext.Provider>
   );
 }

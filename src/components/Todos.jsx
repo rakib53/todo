@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaPlus } from "react-icons/fa6";
+import MyContext from "../ContextAPI/Context";
 import styles from "../styles/Todos.module.css";
 import Todo from "./Todo";
 
-const Todos = ({ todos, handleAddTodo }) => {
+const Todos = () => {
   const [searchByTodoName, setSearchByTodoName] = useState("");
   const [searchByCategory, setSearchByCategory] = useState("all");
+  const { todos, handleAddTodo } = useContext(MyContext);
 
   return (
     <div className={styles.todoPageWrapper}>
