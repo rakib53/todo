@@ -9,6 +9,41 @@ const Todos = () => {
   const [searchByCategory, setSearchByCategory] = useState("all");
   const { todos, handleAddTodo } = useContext(MyContext);
 
+  let content;
+  if (todos?.length === 0) {
+    content = (
+      <div className={styles.noTodoFoundWrapper}>
+        <h2 className={styles.noTodoFound}>No todo found!</h2>
+      </div>
+    );
+  }
+  if (todos?.length > 0) {
+    content = (
+      <>
+        {todos
+          ?.filter((todo) => {
+            if (searchByTodoName?.length > 0) {
+              return todo?.title
+                ?.toLowerCase()
+                .includes(searchByTodoName.toLowerCase());
+            } else {
+              return todo;
+            }
+          })
+          .filter((todo) => {
+            if (searchByCategory) {
+              return todo?.category === searchByCategory;
+            } else {
+              return todo;
+            }
+          })
+          .map((todo, index) => {
+            return <Todo key={index} todo={todo} />;
+          })}
+      </>
+    );
+  }
+
   return (
     <div className={styles.todoPageWrapper}>
       <div className={styles.todoHeader}>
@@ -46,34 +81,16 @@ const Todos = () => {
       </div>
 
       <div className={styles.todoWrapper}>
-        {todos
-          ?.filter((todo) => {
-            if (searchByTodoName?.length > 0) {
-              return todo?.title
-                ?.toLowerCase()
-                .includes(searchByTodoName.toLowerCase());
-            } else {
-              return todo;
-            }
-          })
-          .filter((todo) => {
-            if (searchByCategory) {
-              return todo?.category === searchByCategory;
-            } else {
-              return todo;
-            }
-          })
-          .map((todo, index) => {
-            return <Todo key={index} todo={todo} />;
-          })}
-
-        <div className={styles.totalTodoCount}>
-          {`Total ${
-            todos?.length > 1
-              ? todos?.length + " items left"
-              : todos?.length + " item left"
-          }`}
-        </div>
+        {content}
+        {todos?.length > 0 && (
+          <div className={styles.totalTodoCount}>
+            {todos?.length > 1
+              ? `Total ${todos?.length} items left`
+              : todos?.length === 1
+              ? `Total ${todos?.length} item left`
+              : null}
+          </div>
+        )}
       </div>
     </div>
   );

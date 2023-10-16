@@ -21,17 +21,19 @@ function AddTodoInput() {
       category: todo?.category,
       isCompleted: false,
     };
-    const existingTodos = localStorage.getItem("myTodos");
-    const existingTodosArray = JSON.parse(existingTodos);
-    if (!existingTodosArray) {
-      setTodos([newTodo]);
-      localStorage.setItem("myTodos", JSON.stringify([newTodo]));
-      setIsOpenModal(false);
-    } else {
-      setTodos([...existingTodosArray, newTodo]);
-      existingTodosArray.push(newTodo);
-      localStorage.setItem("myTodos", JSON.stringify(existingTodosArray));
-      setIsOpenModal(false);
+    if (todo?.title?.length > 0) {
+      const existingTodos = localStorage.getItem("myTodos");
+      const existingTodosArray = JSON.parse(existingTodos);
+      if (!existingTodosArray) {
+        setTodos([newTodo]);
+        localStorage.setItem("myTodos", JSON.stringify([newTodo]));
+        setIsOpenModal(false);
+      } else {
+        setTodos([...existingTodosArray, newTodo]);
+        existingTodosArray.push(newTodo);
+        localStorage.setItem("myTodos", JSON.stringify(existingTodosArray));
+        setIsOpenModal(false);
+      }
     }
   };
 
