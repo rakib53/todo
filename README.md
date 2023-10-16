@@ -13,8 +13,7 @@ This is a simple todo application for a job task. this application made with rea
 - I've added localstorage funcion in it so when a user will refresh the website or revisit the website the content will not delete.
 - This todo application is totally responsive for all kind of device.
 
-Project Necessary links below:
+### Project Necessary links below:
 
-[Live site link](https://todo-two-khaki.vercel.app/)
-
-[Github repo](https://github.com/rakib53/todo)
+- [Live site link](https://todo-two-khaki.vercel.app/)
+- [Github repo](https://github.com/rakib53/todo)
