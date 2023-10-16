@@ -1,7 +1,5 @@
 # Todo application
 
-##
-
 This is a simple todo application for a job task. this application made with react.js for and core css for design.
 
 - An user can add any todo by clicking plus icon from top right corner.
