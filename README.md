@@ -1,9 +1,12 @@
 # Todo application
 
-## Job task
+##
 
-This is a simple todo application made with react.js for and core css for design.
+This is a simple todo application for a job task. this application made with react.js for and core css for design.
+
+Necessary links below:
 [Live site link](https://todo-two-khaki.vercel.app/)
+
 [Github repo](https://github.com/rakib53/todo)
 
 - An user can add any todo by clicking plus icon from top right corner.
